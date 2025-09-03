@@ -56,6 +56,10 @@ const Orphanage = mongoose.model('Orphanage', orphanageSchema);
 // Health Check
 app.get('/healthz', (req, res) => res.send('OK'));
 
+app.get("/",(req,res)=>{
+    res.send("OrphanageCare backend is running!");
+});
+
 // Donor Registration
 app.post('/register-donor', async (req, res) => {
     const { name, email, password } = req.body;
@@ -186,10 +190,11 @@ app.post('/update-orphanage/:portNumber', async (req, res) => {
 });
 
 // ================== Start Server ==================
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0",() => {
     console.log(`Server is running on port ${PORT}`);
 });
 
 //rohithvadla07_db_user
+
 
 //PHvwYC93hLQhjJL3
