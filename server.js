@@ -13,6 +13,9 @@ app.use(cors({
   credentials: true
 }));
 
+// Allow preflight requests for all routes
+app.options("*", cors());
+
 app.use(bodyParser.json());
 
 // MongoDB Connection
@@ -203,4 +206,5 @@ app.listen(PORT, "0.0.0.0",() => {
 
 
 //PHvwYC93hLQhjJL3
+
 
