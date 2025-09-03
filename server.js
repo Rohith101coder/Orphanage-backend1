@@ -9,8 +9,7 @@ const PORT = process.env.PORT || 5001;
 // Middleware
 app.use(cors({
   origin: "https://orphanage-frontened1.onrender.com",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
+  methods: ["GET", "POST", "PUT", "DELETE"]
 }));
 
 // Allow preflight requests for all routes
@@ -206,5 +205,6 @@ app.listen(PORT, "0.0.0.0",() => {
 
 
 //PHvwYC93hLQhjJL3
+
 
 
