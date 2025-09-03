@@ -7,7 +7,12 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 // Middleware
-app.use(cors({ origin: process.env.CORS_ORIGIN || '*' }));
+app.use(cors({
+  origin: "https://orphanage-frontened1.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 app.use(bodyParser.json());
 
 // MongoDB Connection
@@ -198,3 +203,4 @@ app.listen(PORT, "0.0.0.0",() => {
 
 
 //PHvwYC93hLQhjJL3
+
